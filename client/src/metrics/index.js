@@ -47,11 +47,11 @@ if (window.performance) {
     const [navigation] = window.performance.getEntriesByType("navigation");
 
     const connect = Math.round(navigation.connectEnd - navigation.connectStart);
-    console.log(connect);
+    //console.log(connect);
     counter.send("connect", connect);
 
     const reqRes = Math.round(navigation.responseEnd - navigation.requestStart);
-    console.log(reqRes);
+    //console.log(reqRes);
     counter.send("ttfb", reqRes);
 
     setTimeout(function () {
@@ -59,7 +59,7 @@ if (window.performance) {
         let entries = performance.getEntriesByType("paint");
         entries.forEach((entry) => {
             const { name, startTime } = entry;
-            console.log(name, Math.round(startTime));
+            //console.log(name, Math.round(startTime));
             if (name === "first-contentful-paint") counter.send("fcp", Math.round(startTime));
             else counter.send("fp", Math.round(startTime));
         });
@@ -68,6 +68,6 @@ if (window.performance) {
 let timeStart = Date.now();
 window.addEventListener("getBuilds", () => {
     const getBuilds = Date.now() - timeStart;
-    console.log(getBuilds);
+    // console.log(getBuilds);
     counter.send("getBuilds", Math.round(getBuilds));
 });
