@@ -1,0 +1,164 @@
+// Fonts
+@mixin h1 {
+    font: {
+        weight: 500;
+        size: 24px;
+    }
+    letter-spacing: 0.25px;
+}
+
+@mixin h1_mobile {
+    font: {
+        weight: 500;
+        size: 18px;
+    }
+    line-height: 22px;
+    letter-spacing: 0.25px;
+}
+
+@mixin popup_title {
+    font: {
+        weight: 500;
+        size: 18px;
+    }
+    line-height: 22px;
+}
+
+@mixin h2 {
+    font: {
+        size: 15px;
+    }
+    line-height: 20px;
+}
+
+@mixin body-lh-18 {
+    font: {
+        size: 13px;
+    }
+    line-height: 18px;
+    letter-spacing: 0.06px;
+}
+
+@mixin body-lh-16 {
+    font: {
+        size: 13px;
+    }
+    line-height: 16px;
+    letter-spacing: 0.06px;
+}
+
+@mixin buildNumber {
+    font: {
+        size: 18px;
+        weight: 500;
+    }
+    line-height: 20px;
+}
+
+@mixin buildNumber-mobile {
+    font: {
+        size: 16px;
+        weight: 500;
+    }
+    line-height: 16px;
+}
+
+@mixin popup-input {
+    font: {
+        size: 13px;
+    }
+    line-height: 15px;
+}
+
+// Hide long strings
+@mixin hide-strings {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+// Absolute
+@mixin absolute-image($width, $height, $image) {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: $width;
+    height: $height;
+    background-image: $image;
+}
+
+@mixin absolute-position($width, $height, $top, $left) {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: $width;
+    height: $height;
+    left: $left;
+    top: $top;
+}
+
+// Buttons
+@mixin button($padding, $height, $color) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    border-radius: 4px;
+    background-color: $color;
+    padding: 0 $padding;
+    height: $height;
+}
+
+@mixin button-2($color, $height) {
+    display: flex;
+    align-items: center;
+    height: $height;
+    font-size: 13px;
+    border-radius: 4px;
+    background-color: $color;
+    padding: 0 15px 0 25px;
+}
+
+@mixin button-hover($color) {
+    background-color: $color;
+}
+
+@mixin button-focused($border) {
+    box-shadow: inset 0px 0px 0px 2px $border;
+}
+
+@mixin button-disabled($color, $textcolor) {
+    background-color: $color;
+    opacity: 0.5;
+    color: $textcolor;
+}
+
+// Flexbox
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+// margin-bottom
+
+@mixin mb-8 {
+    margin-bottom: 8px;
+}
+
+@mixin mb-12 {
+    margin-bottom: 12px;
+}
+
+@mixin mb-18 {
+    margin-bottom: 18px;
+}

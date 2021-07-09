@@ -1,0 +1,20 @@
+{
+    "name": "ci_server",
+    "version": "1.0.0",
+    "description": "CI_server",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js",
+        "watch": "nodemon --watch server.js --watch controllers/*"
+    },
+    "author": "Venera Butakova",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.21.1",
+        "cors": "^2.8.5",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "nodemon": "^2.0.7"
+    }
+}
